@@ -34,6 +34,7 @@ npm install
 npm run dev
 
 # copy the example env and generate an application key
+cp .env.example .env
 php artisan key:generate
 
 # run a local minio server within docker, taking note of the `AccessKey` and `SecretKey` in the output
