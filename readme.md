@@ -40,9 +40,12 @@ php artisan key:generate
 # run a local minio server within docker, taking note of the `AccessKey` and `SecretKey` in the output
 docker run -it -p 9000:9000 minio/minio:RELEASE.2019-08-14T20-37-41Z server /data
 ```
-The above `docker run` command will output an `AccessKey` and a `SecretKey`.
+The above `docker run` command will output an `AccessKey` and a `SecretKey`. You can now login to the
+frontend of the minio server by going to `http://localhost:9000` and entering your keys. After doing
+this you will need to create a new bucket called `app`. This is where we will store files within the
+demo application.
 
-Using the values output from the above, set the following env variables in your `.env` file
+After creating the new bucket set the following env variables in your `.env` file using your minio keys:
 ```
 FILESYSTEM_DRIVER=s3
 S3_ENDPOINT=http://localhost:9000
