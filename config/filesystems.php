@@ -43,15 +43,6 @@ return [
 
     'disks' => [
 
-        'public' => [
-            'driver' => 's3',
-            'url' => env('S3_URL'),
-            'key' => env('S3_ACCESS_KEY_ID'),
-            'secret' => env('S3_SECRET_ACCESS_KEY'),
-            'region' => 'eu-west-1',
-            'bucket' => env('S3_PUBLIC_BUCKET'),
-        ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('S3_ACCESS_KEY_ID'),
